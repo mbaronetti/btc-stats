@@ -11,9 +11,9 @@ class HomeIntro extends Component {
     render() {
     return (
         <div className="HomeIntro">
-            <small className="text-muted">Prototypes over presentations, and we prefer to question everything.</small>
+            <small className="text-muted">Welcome to our network, prototyping the future of the world</small>
             <p className="HomeTitle" >BLOCKCHAIN</p>
-            <TextAnimation id="homeText" value="At the center has to be a clear and precise understanding of the way technology and people work together. How do you think we could better organize/display these charts to our users? " />
+            <TextAnimation id="homeText" value="We are on a mission to build a more open, accessible, and fair financial future, one piece of software at a time. Our technology is revolutionizing the financial services industry by empowering millions across the globe to authenticate and transact immediately and without costly intermediaries." />
         </div>
     );
     }
