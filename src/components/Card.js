@@ -17,12 +17,10 @@ class Card extends Component {
                 <span className="Card-title">{this.props.title}</span>
                 <span className="Card-info">{this.props.value}</span>
             </div>
-            <div  className="col-sm-12 col-md-6">
-                <span className="Card-chart">
-                    <Chart />
-                </span>
+            <div  className="Card-chart col-sm-12 col-md-6">
+                <Chart />
             </div>
-            <div hidden className="Card-text col-sm-12 col-md-6">
+            <div className="Card-text col-sm-12 col-md-6">
                 <p>{this.props.text}</p>
             </div>
         </div>

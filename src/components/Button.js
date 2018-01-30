@@ -14,7 +14,7 @@ class Button extends Component {
     render() {
     return (
       <div  className="Button-container">
-        <button active={this.props.active} onClick={this.handleClick} className="Button">
+        <button active={this.props.active} onClick={this.props.onClick} className="Button">
             <i className="material-icons">{this.props.icon}</i>
         </button>
         <span>{this.props.value}</span>

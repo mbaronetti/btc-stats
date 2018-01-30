@@ -82,7 +82,8 @@ class Background extends Component {
     },
     "modes": {
       "grab": {
-        "distance": 400,
+        "distance": 100,
+        "duration": 0.4,
         "line_linked": {
           "opacity": 0.1
         }
@@ -96,10 +97,6 @@ class Background extends Component {
       },
       "repulse": {
         "distance": 50,
-        "duration": 0.4
-      },
-      "grab": {
-        "distance": 100,
         "duration": 0.4
       },
       "push": {

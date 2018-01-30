@@ -88,4 +88,13 @@
     opacity: .75;
     font-size: .8em; }
 
+.Currency .Card-text {
+  display: none; }
+
+.Popular .Card-chart {
+  display: none; }
+
+[visible="no"] {
+  display: none; }
+
 /*# sourceMappingURL=App.css.map */
