@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+.App {
+  font-family: 'Roboto', sans-serif;
+  color: #fff; }
+  .App .App-container {
+    margin-top: 50px;
+    padding: 50px 0;
+    background: rgba(55, 104, 127, 0.2);
+    padding: 50px; }
+
+.App-logo {
+  width: 100px; }
+
+.App-header {
+  /* background-color: rgba(34, 34, 34, .75); */
+  padding: 20px;
+  color: #fff; }
+
+.App-title {
+  font-size: 1.5em; }
+
+.App-intro {
+  font-size: large; }
+
+.Background {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: #262626;
+  z-index: -9; }
+
+.Button {
+  width: 50px;
+  height: 50px;
+  transform: rotateY(0deg);
+  transition: all .25s ease;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 15px; }
+  .Button i {
+    line-height: 45px; }
+  .Button:hover, .Button[active="true"] {
+    background-color: #DC1F93;
+    transform: rotateX(180deg);
+    color: white; }
+    .Button:hover + span, .Button[active="true"] + span {
+      color: #DC1F93; }
+  .Button + span {
+    text-align: super;
+    font-weight: 100;
+    margin-left: 10px; }
+
+.HomeIntro {
+  font-weight: 100; }
+
+.HomeTitle {
+  font-size: 2em;
+  font-weight: 500; }
+
+.section--title {
+  font-weight: 100;
+  opacity: .5;
+  font-size: 2em;
+  border-bottom: 1px solid #606060; }
+
+.Card {
+  background: #ffffff1a;
+  padding: 25px;
+  margin-bottom: 15px; }
+  .Card .Card-icon {
+    opacity: .5; }
+  .Card .Card-info {
+    display: block;
+    font-size: 2em; }
+  .Card .Card-title {
+    margin-left: 5px;
+    font-weight: 100;
+    font-size: 1.25em;
+    opacity: .75;
+    vertical-align: text-bottom; }
+
+/*# sourceMappingURL=App.css.map */
