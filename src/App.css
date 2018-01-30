@@ -83,5 +83,9 @@
     font-size: 1.25em;
     opacity: .75;
     vertical-align: text-bottom; }
+  .Card .Card-text {
+    font-weight: 100;
+    opacity: .75;
+    font-size: .8em; }
 
 /*# sourceMappingURL=App.css.map */

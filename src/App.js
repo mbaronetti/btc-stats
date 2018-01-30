@@ -48,9 +48,9 @@ class App extends Component {
                 </div>
                 <div className="col-sm-12 col-md-6">
                     <p className="section--title">{this.state.section}</p>
-                    <Card icon="alarm" title="USD Market Price" value={(this.state.data.market_price_usd) ? this.state.data.market_price_usd : this.state.fetching} />
-                    <Card icon="list" title="Blocks Mined" value={this.state.data.n_blocks_mined} />
-                    <Card icon="fingerprint" title="BTC Revenue" value={ this.state.data.miners_revenue_btc} />
+                    <Card icon="alarm" title="USD Market Price" value={this.state.data.market_price_usd} text="sample text" />
+                    <Card icon="list" title="Blocks Mined" value={this.state.data.n_blocks_mined} text="sample text" />
+                    <Card icon="fingerprint" title="BTC Revenue" value={ this.state.data.miners_revenue_btc} text="sample text" />
                 </div>
             </div>
         </div>
