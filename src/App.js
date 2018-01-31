@@ -11,14 +11,14 @@ class App extends Component {
     constructor(props){
         super(props);
         this.state = {
-            section : "Currency Stats",
+            section : "Popular Stats",
             resources : null,
             data: '',
             fetching: 'fetching...',
-            currencyActive : 'true',
-            popularActive : '',
-            currencyVisible : '',
-            popularVisible : 'no'
+            currencyActive : '',
+            popularActive : 'true',
+            currencyVisible : 'no',
+            popularVisible : ''
             
         }
         this.handleCurrencyClick = this.handleCurrencyClick.bind(this);
@@ -67,8 +67,8 @@ class App extends Component {
             <div className="row">
                 <div className="col-sm-12 col-md-6">
                     <HomeIntro />
-                    <Button active={this.state.currencyActive} onClick={this.handleCurrencyClick} icon="compare_arrows" value="Currency Stats"/>
-                    <Button active={this.state.popularActive} onClick={this.handlePopularClick} icon="monetization_on" value="Popular Stats"/>
+                    <Button active={this.state.popularActive} onClick={this.handlePopularClick} icon="compare_arrows" value="Popular Stats"/>
+                    <Button active={this.state.currencyActive} onClick={this.handleCurrencyClick} icon="monetization_on" value="Currency Stats"/>
                     <Button icon="list" value="Block Details"/>
                     <Button icon="fingerprint" value="Mining Information"/>
                 </div>
