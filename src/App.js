@@ -57,6 +57,12 @@ class App extends Component {
     };
     
   render() {
+      const data = {
+          totalBitcoins : { title : 'Total Bitcoins' , source : "https://api.blockchain.info/charts/blocks-size?format=json"},
+          marketPrice : {title : 'Market Price' , source : "https://api.blockchain.info/charts/market-price?format=json"},
+          marketCap : {title : 'Market Cap' , source : "https://api.blockchain.info/charts/market-cap?format=json"},
+          tradeVolume : {title : 'Trade Volume' , source : "https://api.blockchain.info/charts/trade-volume?format=json"}
+      }
     return (
       <div className="App">
         <Background />
@@ -80,10 +86,10 @@ class App extends Component {
                 </div>
                 <div visible={this.state.currencyVisible} className="Currency col-sm-12 col-md-6">
                     <p className="section--title">{this.state.section}</p>
-                    <Card data="https://api.blockchain.info/charts/blocks-size?format=json" icon="alarm" title="Total Bitcoins" value={this.state.data.n_blocks_total} text="" />
-                    <Card data="https://api.blockchain.info/charts/market-price?format=json" icon="alarm" title="Market price" value={this.state.data.n_blocks_total} text="" />
-                    <Card data="https://api.blockchain.info/charts/market-cap?format=json" icon="list" title="Market Cap" value={this.state.data.n_tx} text="" />
-                    <Card data="https://api.blockchain.info/charts/trade-volume?format=json" icon="fingerprint" title="Trade Volume" value={ this.state.data.minutes_between_blocks} text="" />
+                    <Card data={data.totalBitcoins.source} icon="alarm" title={data.totalBitcoins.title} value={this.state.data.n_blocks_total} text="" />
+                    <Card data={data.marketPrice.source} icon="alarm" title={data.marketPrice.title} value={this.state.data.n_blocks_total} text="" />
+                    <Card data={data.marketCap.source} icon="list" title={data.marketCap.title} value={this.state.data.n_tx} text="" />
+                    <Card data={data.tradeVolume.source} icon="fingerprint" title={data.tradeVolume.title} value={ this.state.data.minutes_between_blocks} text="" />
                 </div>
             </div>
         </div>
