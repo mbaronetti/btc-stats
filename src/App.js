@@ -16,7 +16,7 @@ class App extends Component {
             data: '',
             fetching: 'fetching...',
             currencyActive : '',
-            popularActive : 'true',
+            popularActive : 'true', 
             currencyVisible : 'no',
             popularVisible : ''
             

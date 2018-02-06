@@ -24,11 +24,9 @@ class Chart extends Component {
           });
     };
     render() {
-        const data = this.state.data;
-     
     return (
         <ResponsiveContainer>
-            <LineChart data={data}>
+            <LineChart data={this.state.data}>
               <Line type="monotone" dataKey="y" stroke="#8884d8" r={0} />
             </LineChart>
         </ResponsiveContainer>

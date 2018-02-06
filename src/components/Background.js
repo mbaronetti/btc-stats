@@ -16,7 +16,7 @@ class Background extends Component {
       }
     },
     "color": {
-      "value": "#f0f0f0"
+      "value": "#55efc4"
     },
     "shape": {
       "type": "circle",
@@ -26,7 +26,7 @@ class Background extends Component {
       }
     },
     "opacity": {
-      "value": 0.25,
+      "value": 0.3,
       "random": false,
       "anim": {
         "enable": false,
@@ -48,7 +48,7 @@ class Background extends Component {
     "line_linked": {
       "enable": true,
       "distance": 100, 
-      "color": "#81ecec",
+      "color": "#55efc4",
       "opacity": 0.05,
       "width": 1
     },
