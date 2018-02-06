@@ -80,9 +80,10 @@ class App extends Component {
                 </div>
                 <div visible={this.state.currencyVisible} className="Currency col-sm-12 col-md-6">
                     <p className="section--title">{this.state.section}</p>
-                    <Card icon="alarm" title="Circulation" value={this.state.data.n_blocks_total} text="" />
-                    <Card icon="list" title="N TX" value={this.state.data.n_tx} text="" />
-                    <Card icon="fingerprint" title="Block rate" value={ this.state.data.minutes_between_blocks} text="" />
+                    <Card data="https://api.blockchain.info/charts/blocks-size?format=json" icon="alarm" title="Total Bitcoins" value={this.state.data.n_blocks_total} text="" />
+                    <Card data="https://api.blockchain.info/charts/market-price?format=json" icon="alarm" title="Market price" value={this.state.data.n_blocks_total} text="" />
+                    <Card data="https://api.blockchain.info/charts/market-cap?format=json" icon="list" title="Market Cap" value={this.state.data.n_tx} text="" />
+                    <Card data="https://api.blockchain.info/charts/trade-volume?format=json" icon="fingerprint" title="Trade Volume" value={ this.state.data.minutes_between_blocks} text="" />
                 </div>
             </div>
         </div>

@@ -18,7 +18,7 @@ class Card extends Component {
                 <span className="Card-info">{this.props.value}</span>
             </div>
             <div  className="Card-chart col-sm-12 col-md-6">
-                <Chart />
+                <Chart data={this.props.data} />
             </div>
             <div className="Card-text col-sm-12 col-md-6">
                 <p>{this.props.text}</p>
