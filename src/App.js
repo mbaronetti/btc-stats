@@ -16,7 +16,7 @@ class App extends Component {
             data: '',
             fetching: 'fetching...',
             currencyActive : '',
-            popularActive : true, 
+            popularActive : 'true', 
             currencyVisible : 'no',
             popularVisible : ''
             
@@ -26,8 +26,8 @@ class App extends Component {
     }
     handleCurrencyClick(){
         this.setState({
-            currencyActive : true,
-            popularActive : false,
+            currencyActive : 'true',
+            popularActive : 'false',
             section : 'Currency Stats',
             currencyVisible : '',
             popularVisible : 'no'
@@ -36,8 +36,8 @@ class App extends Component {
     } 
     handlePopularClick(){
         this.setState({
-            currencyActive : false,
-            popularActive : true,
+            currencyActive : 'false',
+            popularActive : 'true',
             section : 'Popular Stats',
             currencyVisible : 'no',
             popularVisible : ''
