@@ -44,7 +44,7 @@ class App extends Component {
         });
     } 
    componentDidMount() {
-        let proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+        const proxyUrl = 'https://cors-anywhere.herokuapp.com/',
         targetUrl = "https://api.blockchain.info/stats"
         fetch(proxyUrl + targetUrl)
           .then(blob => blob.json())
@@ -66,6 +66,7 @@ class App extends Component {
           marketCap : {title : 'Market Cap' , source : "https://api.blockchain.info/charts/market-cap?format=json"},
           tradeVolume : {title : 'Trade Volume' , source : "https://api.blockchain.info/charts/trade-volume?format=json"}
       }
+      
     return (
       <div className="App">
         <Background />
@@ -83,7 +84,7 @@ class App extends Component {
                 </div>
                 <div visible={this.state.popularVisible} className="Popular col-sm-12 col-md-6">
                     <p className="section--title">{this.state.section}</p>
-                    <Card icon="alarm" title="USD Market Price" value={(this.state.data) ? this.state.data.market_price_usd : "loading"} text="Precio medio de mercado en USD a través de intercambios importantes de bitcoins." />
+                    <Card icon="alarm" title="Market Price (USD)" value={(this.state.data) ? this.state.data.market_price_usd.toFixed(2) : "loading"} text="Precio medio de mercado en USD a través de intercambios importantes de bitcoins." />
                     <Card icon="list" title="Blocks Mined" value={(this.state.data) ? this.state.data.n_blocks_mined : 'loading'} text="El tamaño de bloque promedio de 24 horas en MB." />
                     <Card icon="fingerprint" title="BTC Revenue" value={(this.state.data) ? this.state.data.miners_revenue_btc : 'loading'} text="El número total de transacciones Bitcoin confirmados en las últimas 24 horas." />
                 </div>
