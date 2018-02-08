@@ -44,16 +44,19 @@ class App extends Component {
         });
     } 
    componentDidMount() {
-        fetch("https://api.myjson.com/bins/108cb9")
-            .then( (response) => {
-                return response.json() })   
-                    .then( (json) => {
-                        this.setState({data: json});
-                        console.log(this.state.data);
-                    }).catch(function(error) {
-                    this.setState({fetching: 'error'});
-                    console.log(error);
-            });;
+        let proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+        targetUrl = "https://api.blockchain.info/stats"
+        fetch(proxyUrl + targetUrl)
+          .then(blob => blob.json())
+          .then(data => {
+            this.setState({data : data});
+            return data;
+          })
+          .catch(e => {
+            console.log(e);
+            return e;
+          });
+       
     };
     
   render() {
@@ -80,9 +83,9 @@ class App extends Component {
                 </div>
                 <div visible={this.state.popularVisible} className="Popular col-sm-12 col-md-6">
                     <p className="section--title">{this.state.section}</p>
-                    <Card icon="alarm" title="USD Market Price" value={this.state.data.market_price_usd} text="Precio medio de mercado en USD a través de intercambios importantes de bitcoins." />
-                    <Card icon="list" title="Blocks Mined" value={this.state.data.n_blocks_mined} text="El tamaño de bloque promedio de 24 horas en MB." />
-                    <Card icon="fingerprint" title="BTC Revenue" value={ this.state.data.miners_revenue_btc} text="El número total de transacciones Bitcoin confirmados en las últimas 24 horas." />
+                    <Card icon="alarm" title="USD Market Price" value={(this.state.data) ? this.state.data.market_price_usd : "loading"} text="Precio medio de mercado en USD a través de intercambios importantes de bitcoins." />
+                    <Card icon="list" title="Blocks Mined" value={(this.state.data) ? this.state.data.n_blocks_mined : 'loading'} text="El tamaño de bloque promedio de 24 horas en MB." />
+                    <Card icon="fingerprint" title="BTC Revenue" value={(this.state.data) ? this.state.data.miners_revenue_btc : 'loading'} text="El número total de transacciones Bitcoin confirmados en las últimas 24 horas." />
                 </div>
                 <div visible={this.state.currencyVisible} className="Currency col-sm-12 col-md-6">
                     <p className="section--title">{this.state.section}</p>
