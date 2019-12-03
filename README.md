@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/mbaronetti/spotify-dash/master/preview.png "Preview")
+![alt text](https://raw.githubusercontent.com/mbaronetti/btc-stats/master/scr.png "Preview")
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
